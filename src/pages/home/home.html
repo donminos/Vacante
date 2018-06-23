@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Scooter
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of elementsList; let i=index">
+      <h2 *ngIf="i==0">{{ 'RECOMMENDED' | translate }}</h2>
+      <h2>Id:{{item.properties.id}} </h2>
+      <h3>{{ 'NUMBER' | translate }}:{{item.properties.number}}</h3>
+      <p>
+          {{ 'DISTANCE' | translate }}:{{item.properties.distance}}m
+      </p>
+      <p>
+        {{ 'RANGE' | translate }}:{{item.properties.range}}km
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>
